@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+	h1{
+	font-family: georgia;
+	color: white;
+	text-align: center;
+	font-size: 60px;
+	}
+	
+	h2{
+	text-align:center;
+	color: white;
+	font-family: arial;
+	font-size: 40px;
+
+
+	}
+	h3{
+	text-align:center;
+	color: white;
+	font-family: arial;
+	font-size: 30px;
+
+
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+	    background-image: url('static/images/bgproj.jpg');
+        }
+
+       
+
+        form {
+            margin: 20px auto;
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #999;
+            margin-left: 10px;
+        }
+
+        img {
+    display: block;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust this value to make the image larger */
+    border-radius: 5px;
+    border: 2px solid red; /* Add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
+}
+
+    </style>
+</head>
+<body>
+
+<h1>Haircuts</h1>
+<h3>Rate Haircut of your Preference</h3>
+
+<form action="/" method="post">
+    <label>Fade:</label>
+    <input type="text" name="fade">
+    <br>
+    <label>Barber's cut:</label>
+    <input type="text" name="barber">
+    <br>
+    <label>Mohawks:</label>
+    <input type="text" name="mohawk">
+    <br>
+    <label>Undercut:</label>
+    <input type="text" name="undercut">
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset" name="reset">Clear</button>
+</form>
+
+<h2>{{"You might like this! "}}</h2>
+<br>
+<img src="{{url_for('static', filename='images/'+ firstname)}}">
+</body>
+</html>
